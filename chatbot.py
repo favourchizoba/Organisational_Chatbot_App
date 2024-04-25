@@ -128,6 +128,13 @@ with chats:
         reply_hist.append(response)
 
 
+# Clearing Chat History 
+def clearHistory():
+    with open('history.txt', 'w') as file:
+        pass  
+
+    with open('reply.txt', 'w') as file:
+        pass
 
 
 
@@ -167,7 +174,8 @@ st.dataframe(history, use_container_width = True)
 #st.sidebar.write(data2)
 
 
-
+if st.button('Clear Chat History'):
+    clearHistory()
 
 # primarycolor = '#FF4B4B'
 # backgroundcolor = '#FB9AD1'
